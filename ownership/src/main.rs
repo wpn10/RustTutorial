@@ -24,8 +24,15 @@ fn main() {
     //where we can change the values it is &mut var 
     //Only one mutable reference allowed to be paassed 
 
-}
+    let mut s1 = String::from("Hello");
+    let len = calculate_length(&mut s1); //Mutable reference and only one mutable reference is possible for any variable at any time which stops data races 
+    println!("The lenght of {} is {}", s1, len);
 
+}
+fn calculate_length(string: &mut String) -> usize{
+    let length = string.len();
+    length
+}
 fn takes_ownership(somestring: String){
     println!("Received the ownership of the string s to some string {}", somestring);
 }

@@ -1,0 +1,12 @@
+# Ignore the build directory
+/target/
+
+# Ignore generated files
+**/*.rs.bk
+*.log
+
+# Ignore Cargo.lock for libraries (optional, only for libraries)
+# If you're developing a binary application, you may want to commit Cargo.lock.
+# For libraries, uncomment the following line.
+# /Cargo.lock
+
